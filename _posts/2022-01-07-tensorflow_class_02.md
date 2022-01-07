@@ -21,7 +21,8 @@ search: true
 - 상자 그림(Box Plot) 이론 : 데이터 특징을 잘 요약해 주는 5가지 값을 시각적으로 표현함  
 - 산포도 (Scatter Plot) 이론 : 직각 좌표계에서 두 변수에 대응하는 관측값을 점들로 표현한 그림임  
 
-
+## 패키지 설치
+- pandas, matplotlib, seaborn, keras, scikit-learn
 
 ```python
 
