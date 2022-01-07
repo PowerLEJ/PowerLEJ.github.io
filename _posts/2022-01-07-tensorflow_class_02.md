@@ -99,8 +99,14 @@ print(raw.describe())
 -- 범위가 작은 요소는 의미가 거의 묻혀 버림  
 --> 따라서 제트점수 정규화를 진행한다  
 
+- Pandas 데이터 프레임  
+-- 2차원 테이블에 특화된 구조  
+-- Numpy 행렬과 호환됨
+
 - **Z-점수 = (X - 평균) / 표준편차**  
 -- 평균은 0, 표준편차는 1이 되게 함  
+-- Fit transform 함수로 Z-점수 정규화 진행  
+-- Pandas의 head와 describe 함수로 데이터 내용 확인함  
 
 - 예시  
 -- A는 AS시험 1800점 / 2400점  
@@ -157,8 +163,53 @@ print(z_data.describe())
     75%    7.396560e-03  4.877224e-02  ...  6.030188e-01  2.685231e-01
     max    9.933931e+00  3.804234e+00  ...  3.548771e+00  2.989460e+00  
     [8 rows x 13 columns]
-```
+```  
 
+## 지도 학습과 사분할 이론  
+- Pandas 패키지를 사용해서 Boston Dataset을 2분할 함  
+- Scikit-learn 패키지를 사용해서 Boston Dataset을 4분할 함  
+학습용 입력값 X_train / 학습용 출력값 Y_train  
+평가용 입력값 X_test  / 평가용 출력값 Y_test  
+
+```python
+# 데이터를 입력과 출력으로 분리
+print('\n분리 전 데이터 모양: ', z_data.shape)
+X_data = z_data.drop('MEDV', axis=1) # axis=1 컬럼을 누락, axis=0 행을 누락
+Y_data = z_data['MEDV']
+
+# 데이터를 학습용과 평가용으로 분리
+# X_train, X_test, Y_train, Y_test 순서 중요
+# test_size는 평가용 데이터를 전체 데이터에서 무작위로 몇 퍼센트 무시할 건지 지정
+X_train, X_test, Y_train, Y_test = train_test_split(X_data, Y_data, test_size=0.3)
+
+print('\n학습용 입력 데이터 모양', X_train.shape)
+print('학습용 출력 데이터 모양', Y_train.shape)
+print('평가용 입력 데이터 모양', X_test.shape)
+print('평가용 출력 데이터 모양', Y_test.shape)
+```   
+
+>  
+결과  
+```
+    분리 전 데이터 모양:  (506, 13) # (506, 13) 506개의 데이터(엑셀에서 집값 데이터), 각각의 데이터가 13개로 이루어져 있다
+    -----------
+    학습용 입력 데이터 모양 (354, 12) # 506의 70% / 13개 요소 중에 1개 drop 했으니까 12개, 2차원 데이터 모양
+    학습용 출력 데이터 모양 (354,) # 1차원 데이터 모양
+    평가용 입력 데이터 모양 (152, 12)
+    평가용 출력 데이터 모양 (152,)
+```  
+
+## Bosteon 데이터 상자 그림  
+- Seaborn boxplot 함수를 사용해서 상자그림 구현    
+
+```python
+# 상자그림 출력
+sns.set(font_scale=2)
+sns.boxplot(data=z_data, palette='dark')
+plt.show()
+```   
+
+![tensor_class_02_01](/images/2022-01-07-tensorflow_class_01/tensor_class_02_01.png){: width="100%" height="100%"}{: .center}
 
 
 
