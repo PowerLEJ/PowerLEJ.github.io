@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Tensorflow Class 01 01"
+title:  "Tensorflow Class 01 01 Basic"
 categories: tensorflow
 tag: tensorflow
 toc: true

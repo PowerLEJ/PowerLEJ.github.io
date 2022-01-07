@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Tensorflow Class 01 03"
+title:  "Tensorflow Class 01 03 DNN"
 categories: tensorflow
 tag: tensorflow
 toc: true
