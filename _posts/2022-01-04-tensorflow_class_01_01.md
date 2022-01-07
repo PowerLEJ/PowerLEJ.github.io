@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Tensorflow Class 01"
+title:  "Tensorflow Class 01 01"
 categories: tensorflow
 tag: tensorflow
 toc: true
@@ -61,7 +61,7 @@ print('첫 번째 학습용 데이터 입력값:', X_train[0])
 print('첫 번째 학습용 데이터 출력값:', Y_train[0])
 ```
 
-![tensor_class_01_01](/images/2022-01-04-tensorflow_class_01/tensor_class_01_01.png){: width="100%" height="100%"}{: .center}
+![tensor_class_01_01](/images/2022-01-04-tensorflow_class_01_01/tensor_class_01_01_01.png){: width="100%" height="100%"}{: .center}
 
 >
 결과
@@ -137,7 +137,7 @@ plt.show()
 print('첫 번째 학습용 데이터 입력값:', X_train[0])
 ```
 
-![tensor_class_01_02](/images/2022-01-04-tensorflow_class_01/tensor_class_01_02.png){: width="100%" height="100%"}{: .center}
+![tensor_class_01_02](/images/2022-01-04-tensorflow_class_01_01/tensor_class_01_01_02.png){: width="100%" height="100%"}{: .center}
 
 >
 결과
