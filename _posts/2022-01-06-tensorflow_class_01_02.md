@@ -209,7 +209,7 @@ sns.boxplot(data=z_data, palette='dark')
 plt.show()
 ```   
 
-![tensor_class_02_01](/images/2022-01-06-tensorflow_class_01_02/tensor_class_01_02_01.png){: width="100%" height="100%"}{: .center}
+![tensor_class_01_02_01](/images/2022-01-06-tensorflow_class_01_02/tensor_class_01_02_01.png){: width="100%" height="100%"}{: .center}
 
 
 
