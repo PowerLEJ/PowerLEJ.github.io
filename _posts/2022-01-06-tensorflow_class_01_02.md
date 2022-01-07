@@ -37,8 +37,8 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 
 # 하이퍼 파라미터
-MY_EPOCH = 500 # 학습 시 몇 번 반복할지
-MY_BATCH = 64 # 한꺼번에 몇 개를 처리할지
+MY_EPOCH = 500 # 기계 학습 시 학습 데이터를 몇 번 반복하여 학습할지 지정
+MY_BATCH = 64 # 학습 데이터를 매번 메모리에서 몇 개씩 계산할지 지정
 ```
 
 
@@ -174,8 +174,8 @@ print(z_data.describe())
 ```python
 # 데이터를 입력과 출력으로 분리
 print('\n분리 전 데이터 모양: ', z_data.shape)
-X_data = z_data.drop('MEDV', axis=1) # axis=1 컬럼을 누락, axis=0 행을 누락
-Y_data = z_data['MEDV']
+X_data = z_data.drop('MEDV', axis=1) # 입력값에서는 집값을 의미하는 MEDV를 빼고 #axis=1 컬럼을 누락, axis=0 행을 누락
+Y_data = z_data['MEDV'] # 출력값에서 집값을 의미하는 MEDV를 추측하기 위해 넣는다
 
 # 데이터를 학습용과 평가용으로 분리
 # X_train, X_test, Y_train, Y_test 순서 중요
