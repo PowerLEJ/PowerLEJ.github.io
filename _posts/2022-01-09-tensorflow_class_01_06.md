@@ -26,8 +26,8 @@ model = Sequential()
 model.add(InputLayer(input_shape=(28, 28, 1)))
 
 # 첫 번째 합성곱 출력
-model.add(Conv2D(32,
-                 kernel_size=2,
+model.add(Conv2D(32, # 채널
+                 kernel_size=2, # 필터크기
                  padding='same',
                  activation='relu'))
 
@@ -102,7 +102,9 @@ model.summary()
 ############# 인공 신경망 학습 ##############
 
 # 최적화 함수와 손실 함수 지정
-# crossentropy: binary는 둘 중에 하나를 분류할 때, categorical는 두가지 이상의 것을 분류할 때
+# Adam: 경사하강법을 개선한 최적화 알고리즘
+# loss=crossentropy: binary는 둘 중에 하나를 분류할 때, categorical는 두가지 이상의 것을 분류할 때
+# loss=mse 를 써도 되지만 categorical_crossentropy 이게 더 좋음
 # metrics['acc']: 정확도를 출력하고 싶을 때
 model.compile(optimizer='adam',
               loss='categorical_crossentropy',
