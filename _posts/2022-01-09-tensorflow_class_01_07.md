@@ -189,7 +189,7 @@ print(df.describe())
 
 ## 데이터 분할 묶음 이론  
 - Air Passenger Dataset: 144개 데이터  
--- 12달치는 입력, 13번째는 출력  
+-- 12달치는 입력(12달치 여행자 수), 13번째는 출력(13번째 달 여행자 수  예측)  
 -- 데이터 분할을 할 필요가 있는데 두 가지 옵션이 있다  
 
 ![tensor_class_01_07_03](/images/2022-01-09-tensorflow_class_01_07/tensor_class_01_07_03.png){: width="100%" height="100%"}{: .center}  
@@ -284,7 +284,197 @@ print('평가용 출력 데이터 모양:', Y_test.shape)
     학습용 출력 데이터 모양: (105, 1)
     평가용 입력 데이터 모양: (27, 12, 1)
     평가용 출력 데이터 모양: (27, 1)
+```  
+
+
+```python
+################# 인공 신경망 구현 ################
+
+# RNN 구현
+# 케라스 RNN은 2차원 입력만 허용
+model = Sequential()
+model.add(InputLayer(input_shape=MY_SHAPE))
+model.add(LSTM(MY_UNIT))
+
+model.add(Dense(1,
+                activation='sigmoid'))
+
+print('\nRNN 요약')
+model.summary()
+```  
+>  
+결과  
 ```
+    RNN 요약
+    Model: "sequential"
+    _________________________________________________________________
+    Layer (type)                Output Shape              Param #   
+    =================================================================
+    lstm (LSTM)                 (None, 300)               362400    
+    dense (Dense)               (None, 1)                 301       
+    =================================================================
+    Total params: 362,701
+    Trainable params: 362,701
+    Non-trainable params: 0
+    _________________________________________________________________
+```  
+
+## Sigmoid 활성화 함수  
+- 딥러닝에서 가장 많이 쓰이는 활성화 함수  
+-- Step function을 대체: 전 구간에서 미분 가능  
+-- 장점: 미분 계산이 간단  
+s'(x) = s(x){1 - s(x)}  
+-- 단점: 기울기 유실 문제  
+
+![tensor_class_01_07_05](/images/2022-01-09-tensorflow_class_01_07/tensor_class_01_07_05.png){: width="100%" height="100%"}{: .center}  
+
+## RMSprop 최적화 알고리즘 이론  
+- Root Mean Square Propagation  
+-- 제프리 힌턴 교수(역전파 알고리즘(백 프로페게이션 알고리즘))팀 제안
+-- 학습률 상황에 맞게 조절(시냅스의 가중치를 보정할 때 정하는 숫자)  
+-- 진동을 줄이는 효과  
+
+![tensor_class_01_07_06](/images/2022-01-09-tensorflow_class_01_07/tensor_class_01_07_06.png){: width="100%" height="100%"}{: .center}  
+
+
+```python
+################# 인공 신경망 학습 ###############
+
+# 최적화 함수와 손실 함수 지정
+model.compile(optimizer='rmsprop',
+              loss='mse') # 정확한 값을 들고 오지 않아도 된다
+
+begin = time()
+print('\nRNN 학습 시작')
+
+model.fit(X_train,
+          Y_train,
+          epochs=MY_EPOCH,
+          batch_size=MY_BATCH,
+          verbose=1)
+
+end = time()
+print('총 학습 시간: {:.1f}초'.format(end - begin))
+```
+
+>  
+결과  
+```
+    RNN 학습 시작
+    Epoch 1/300
+    2/2 [==============================] - 4s 131ms/step - loss: 0.0829
+    Epoch 2/300
+    2/2 [==============================] - 0s 22ms/step - loss: 0.0710
+    Epoch 3/300
+    2/2 [==============================] - 0s 16ms/step - loss: 0.0488
+    Epoch 4/300
+    2/2 [==============================] - 0s 14ms/step - loss: 0.0777
+    Epoch 5/300
+    2/2 [==============================] - 0s 13ms/step - loss: 0.0372
+    Epoch 6/300
+    2/2 [==============================] - 0s 14ms/step - loss: 0.0246
+    Epoch 7/300
+    2/2 [==============================] - 0s 15ms/step - loss: 0.0199
+    Epoch 8/300
+    2/2 [==============================] - 0s 15ms/step - loss: 0.0062
+    ~~~~~~~~~~~~~ 생 략 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Epoch 294/300
+    2/2 [==============================] - 0s 13ms/step - loss: 0.0022
+    Epoch 295/300
+    2/2 [==============================] - 0s 14ms/step - loss: 0.0036
+    Epoch 296/300
+    2/2 [==============================] - 0s 14ms/step - loss: 0.0019
+    Epoch 297/300
+    2/2 [==============================] - 0s 16ms/step - loss: 0.0016
+    Epoch 298/300
+    2/2 [==============================] - 0s 17ms/step - loss: 0.0018
+    Epoch 299/300
+    2/2 [==============================] - 0s 19ms/step - loss: 0.0027
+    Epoch 300/300
+    2/2 [==============================] - 0s 14ms/step - loss: 0.0018
+    총 학습 시간: 14.6초
+```  
+
+```python
+################## 인공 신경망 평가 #################
+
+# RNN 평가
+loss = model.evaluate(X_test,
+                      Y_test,
+                      verbose=1)
+
+print('최종 MSE 손실값: {:.3f}'.format(loss))
+```  
+
+>  
+결과  
+```
+    1/1 [==============================] - 0s 275ms/step - loss: 0.0161
+    최종 MSE 손실값: 0.016
+```  
+
+## Inverse Transformation(역전환) 이론  
+- MinMax 정규화 공식  
+Xscaled = (X - min(X)) / (max(X) - min(X))  
+- MinMax 역전환 공식  
+X = Xscaled(max(X) - min(X)) + min(X)  
+-- LSTM은 [0, 1] 정규화 데이터로 학습  
+-- LSTM predict 결과는 [0, 1] 정규화됨  
+-- Scikit-learn의 inverse_transform 함수 사용  
+-- [0, 1] 역전환으로 원래 여행자 수 복귀  
+
+- LSTM 평가와 관련된 데이터 모양  
+-- X_test(평가용 입력 데이터): numpy 3차원 행렬  
+-- Y_test(평가용 출력 데이터): numpy 2차원 행렬  
+-- Pred(LSTM 예측값): numpy 2차원 행렬  
+
+- LSTM 예측 결과의 시각화  
+-- seaborn package의 lineplot를 사용해보려고 한다  
+-- 근데 Lineplot 함수는 1차원 행렬 요구  
+
+- Numpy flatten 함수  
+-- Numpy로 n-차원 행렬을 1차원으로 축소 가능  
+
+```python
+# RNN 추측
+pred = model.predict(X_test)
+pred = scaler.inverse_transform(pred)
+pred = pred.flatten().astype(int)
+print('\n추측 결과 원본: ', pred)
+
+# 정답 역전환
+truth = scaler.inverse_transform(Y_test)
+truth = truth.flatten().astype(int)
+print('\n정답 원본: ', truth)
+```  
+
+>  
+결과  
+```
+추측 결과 원본:  [400 371 358 338 328 340 359 399 458 498 503 454 409 375 366 359 355 371
+ 385 424 470 510 518 486 450 421 404]
+정답 원본:  [359 310 337 360 342 406 396 420 472 548 559 463 407 362 405 417 391 419
+ 461 472 535 622 606 508 461 390 432]
+```  
+
+## Seaborn Lineplot 함수  
+- 선형 그래프 생성  
+-- LSTM 정확도 평가: MSE 손실값 숫자 하나로는 부족  
+-- LSTM의 예측값과 dataset의 정답을 시각적으로 비교  
+
+```python
+# line plot 구성
+axes = plt.gca()
+axes.set_ylim([0, 650]) # y축의 최소값과 최대값의 범위 지정(0부터 650까지)
+
+sns.lineplot(data=pred, label='pred', color='blue')
+sns.lineplot(data=truth, label='truth', color='red')
+
+plt.show()
+```  
+
+![tensor_class_01_07_07](/images/2022-01-09-tensorflow_class_01_07/tensor_class_01_07_07.png){: width="100%" height="100%"}{: .center}  
+
 
 
 
