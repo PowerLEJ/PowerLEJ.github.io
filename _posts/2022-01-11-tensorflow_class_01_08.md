@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Tensorflow Class 01 11 DNN-GAN"
+title:  "Tensorflow Class 01 08 DNN-GAN"
 categories: tensorflow
 tag: tensorflow
 toc: true
