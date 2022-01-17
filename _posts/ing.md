@@ -21,12 +21,14 @@ print(get_odd_num(num_list))
 # string 연산을 이용해보세요.
 
 sentence = "way a is there will a is there Where"
+sentence = sentence.split(' ')
 
 def reverse_sentence(sentence):
-    x = sentence.split()
-    x = x[::-1]
-    x = ' '.join(x)
-    return x
+    reverse_message = ""
+
+    for i in sentence:
+      reverse_message = i + " " +  reverse_message
+    print(reverse_message)
 
 print(reverse_sentence(sentence))
 
