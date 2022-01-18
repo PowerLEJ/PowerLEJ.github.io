@@ -38,6 +38,19 @@ def reverse_sentence(sentence):
 print(reverse_sentence(sentence))
 
 
+
+def reverse_sentence(sentence):
+    sentence = sentence.split(' ')
+    reverse_message = ""
+    for i in sentence:
+      reverse_message = i + " " +  reverse_message
+    return reverse_message
+
+print(reverse_sentence(sentence))
+
+
+
+
 # Q3. 이번 학기의 중간고사, 기말고사 점수가 발표되었습니다. 각 학생들의 점 수가 튜플 형태로 저장되어 있고, 이를 포함한 리스트가 있습니다. 이를 이용 해 각 학생들의 평균 점수를 출력하는 함수를 제작하세요. 
 # 리스트와 반복문을 사용해 데이터를 불러오세요.
 # 이를 이용해 각 학생별 평균을 구해보세요
