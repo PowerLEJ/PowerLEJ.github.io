@@ -6,12 +6,19 @@
 num_list = [1, 5, 7, 15, 16, 22, 28, 29]
 
 def get_odd_num(num_list):
+    result = []
+    for i in num_list:
+      if i % 2 == 1:
+        result.append(i)
+    return result
 
-    for i in range(len(num_list)):
-      
-      if num_list[i] % 2 == 0: continue
+print(get_odd_num(num_list))
 
-      print(num_list[i])
+
+
+
+def get_odd_num(num_list):
+    return [i for i in num_list if i % 2 == 1]
 
 print(get_odd_num(num_list))
 
@@ -21,14 +28,12 @@ print(get_odd_num(num_list))
 # string 연산을 이용해보세요.
 
 sentence = "way a is there will a is there Where"
-sentence = sentence.split(' ')
 
 def reverse_sentence(sentence):
-    reverse_message = ""
-
-    for i in sentence:
-      reverse_message = i + " " +  reverse_message
-    print(reverse_message)
+    sentence = sentence.split(' ')
+    reverse_message = sentence[::-1]
+    reverse_message = " ".join(reverse_message)
+    return reverse_message
 
 print(reverse_sentence(sentence))
 
@@ -41,10 +46,8 @@ score = [(100, 100), (95, 90), (55, 60), (75, 80), (70, 70)]
 
 def get_avg(score):
   for i in range(len(score)):
-
-    x = score[i]
-    y = (x[0] + x[1]) / 2
-    print(f"[{i}] 번, 평균 : {y}")
+    avg = sum(score[i]) / len(score[i])
+    print(f"[{i}] 번, 평균 : {avg}")
 
 get_avg(score)
 
@@ -57,16 +60,11 @@ dict_first = {'사과': 30, '배': 15, '감': 10, '포도': 10}
 dict_second = {'사과': 5, '감': 25, '배': 15, '귤': 25}
 
 def merge_dict(dict_first, dict_second):
-
-  from itertools import chain
-  from collections import defaultdict
-
-  dict3 = defaultdict(list)
-  for k, v in chain(dict_first.items(), dict_second.items()):
-      dict3[k].append(v)
-
-  for k, v in dict3.items():
-      print(k, v)
+  from collections import Counter
+  first = Counter(dict_first)
+  second = Counter(dict_second)
+  dict_result = dict(first + second)
+  print(dict_result)
 
 merge_dict(dict_first, dict_second)
     
@@ -77,7 +75,6 @@ merge_dict(dict_first, dict_second)
 inputs = "cat32dog16cow5"
 
 def find_string(inputs):
-  
   import re
   x = re.compile(r'-?\d+\.?\d*').sub(' ', inputs)
   y = x.split()
