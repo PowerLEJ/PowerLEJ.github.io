@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Github Blog Action"
-categories: memo
-tag: memo
+categories: git
+tag: git
 toc: true
 author_profile: false
 sidebar:
