@@ -13,7 +13,6 @@ search: true
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}&count_bg=%23FFCF00&title_bg=%230045FF&icon=macys.svg&icon_color=%23FAFF00&title=hits&edge_flat=false)
 
 ## Apache2, PHP, MariaDB Install  
-<br />
 
 ```
 sudo apt-get install vim
@@ -53,7 +52,6 @@ sudo systemctl restart mariadb
 ```  
 
 ### Apache2 웹 서버 기본 경로 설정  
-<br />
 
 ```
 sudo vi /etc/apache2/sites-available/000-default.conf 
@@ -69,7 +67,6 @@ sudo systemctl restart apache2
 ```  
 
 ### 포트 설정 방법  
-<br />
 
 ```
 sudo cp 000-default.conf 001-default.conf // 이런 식으로 복사 해서 수정
