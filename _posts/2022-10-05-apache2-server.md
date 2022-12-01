@@ -77,6 +77,11 @@ sudo vim /etc/apache2/ports.conf
 sudo a2ensite 001-default.conf
 ```  
 
+취소는  
+```
+sudo a2dissite 001-default.conf
+```  
+
 재시작 후 확인  
 ```
 sudo systemctl restart apache2
@@ -92,3 +97,17 @@ apache-log4php-2.3.0/src/main/php 폴더를 log4php로 이름 변경 후 최상�
 로그 확인을 위해서는  
 최상단/log4php 안에 log4php 관련 파일들이 있어야 하며  
 로그 파일이 저장되는 폴더(ex. /home/컴퓨터이름/log4php)는 www-data여야 한다.  
+
+### ProxyRequest 관련 에러  
+
+```
+sudo a2enmod ssl
+sudo a2enmod proxy
+sudo a2enmod proxy_balancer
+sudo a2enmod proxy_http
+```  
+
+재시작 후 확인  
+```
+sudo systemctl restart apache2
+```  
