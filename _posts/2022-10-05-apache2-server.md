@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Apache2, PHP, MariaDB Install"
+title:  "Apache2, PHP, MariaDB, Nodejs, PM2 Install"
 categories: apache2
 tag: apache2
 toc: true
@@ -29,6 +29,7 @@ MariaDB[(none)]> CREATE USER '아이디'@'localhost' IDENTIFIED BY '비번';
 MariaDB[(none)]> GRANT ALL PRIVILEGES ON *.* TO '아이디'@'localhost';
 MariaDB[(none)]> CREATE USER '아이디'@'%' IDENTIFIED BY '비번';
 MariaDB[(none)]> GRANT ALL PRIVILEGES ON *.* TO '아이디'@'%';
+MariaDB[(none)]> FLUSH PRIVILEGES;
 MariaDB[(none)]> SELECT User, Host FROM mysql.user;
 ```  
 
@@ -50,6 +51,12 @@ bind-address = 0.0.0.0
 저장 후 재시작  
 ```
 sudo systemctl restart mariadb
+```  
+
+### 폴더, 파일 권한 바꾸기  
+예시  
+```
+    chown -R www-data:www-data /home/folder
 ```  
 
 ### Apache2 웹 서버 기본 경로 설정  
@@ -92,11 +99,69 @@ sudo netstat -tulpn | grep LISTEN
 
 [Apache log4php Click](https://logging.apache.org/log4php/){: .btn .btn--warning} 의 Download에서  
 Apache log4php 파일 다운로드 한다.  
-apache-log4php-2.3.0/src/main/php 폴더를 log4php로 이름 변경 후 최상단에 둔다.  
+apache-log4php-2.3.0/src/main/php 폴더를 log4php로 이름 변경 후 최상단에 둔다. www-data여야 한다.  
 
 로그 확인을 위해서는  
 최상단/log4php 안에 log4php 관련 파일들이 있어야 하며  
 로그 파일이 저장되는 폴더(ex. /home/컴퓨터이름/log4php)는 www-data여야 한다.  
+
+### Node js Install  
+PPA 를 이용하여 설치  
+
+```
+sudo curl -sL https://deb.nodesource.com/setup_버전.x | sudo -E bash -
+
+// 예시: sudo curl -sL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+
+// 예시: sudo curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+```  
+
+```
+sudo apt-get install nodejs
+```  
+
+### PM2 Install  
+
+```
+npm install -g pm2
+```  
+
+New major version of npm available! 7.7.6 -> 9.2.0 이런 에러가 뜬다  
+
+```
+npm install -g npm@9.2.0
+pm2 -version
+```  
+
+Cannot find module 'agentkeepalive' 이런 에러가 뜬다  
+
+```
+npm install -g agentkeepalive --save
+```  
+
+pm2 시작 시키기  
+
+```
+pm2 start 파일명 -i 갯수 --name "이름"
+// 예시: pm2 start app.js -i 4 --name "app"
+```  
+
+pm2 삭제하기  
+
+```
+pm2 monit // 로 이름이나 숫자를 본다  
+pm2 delete 이름이나 숫자
+// 예시: pm2 delete 0 1 2
+```  
+
+pm2 리로드 또는 재시작 하기  
+
+```
+pm2 reload 이름  
+// 예시: pm2 reload app  
+pm2 restart 이름  
+// 예시: pm2 restart app  
+```  
 
 ### ProxyRequest 관련 에러  
 
