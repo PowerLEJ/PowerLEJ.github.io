@@ -36,3 +36,15 @@ sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 ```
 sudo ln -sf /usr/share/zoneinfo/Turkey /etc/localtime
 ```  
+
+4. localtime 에 있다고 나오면  
+
+이런 식으로 ln: '/usr/share/zoneinfo/America/Argentina/Buenos_Aires' and '/etc/localtime/Buenos_Aires' are the same file
+
+```
+timedatectl list-timezones | grep Buenos_Aires
+```  
+이렇게 확인 하고  
+```
+sudo timedatectl set-timezone America/Argentina/Buenos_Aires
+```  
