@@ -22,6 +22,7 @@ sudo apt-get install php php-common libapache2-mod-php php-mysql php-xml php-cur
 // sudo apt install php7.2 php7.2-common php7.2-mysql php7.2-mbstring php7.2-curl php7.2-xml php7.2-json php7.2-gd php7.2-zip libapache2-mod-php7.2
 // sudo apt install php8.2 php8.2-common php8.2-mysql php8.2-mbstring php8.2-curl php8.2-xml php8.2-json php8.2-gd php8.2-zip libapache2-mod-php8.2
 // sudo apt-get install -y php8.2 php8.2-dev php8.2-cli php8.2-fpm php8.2-common php8.2-igbinary
+// sudo apt install php php-fpm php-common php-mysql php-gd php-cli php-xml php-json php-mbstring php-cgi
 sudo apt-get install mariadb-server
 sudo mysql_secure_installation
 ```  
