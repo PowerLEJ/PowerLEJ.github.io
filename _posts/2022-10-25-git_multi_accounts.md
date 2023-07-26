@@ -87,3 +87,9 @@ GitHub에서 clone 받을 때 github.com 뒤에 -유저1이름 넣기
 ```
 git clone git@github.com-유저1이름:유저1이름/파일명.git
 ```  
+
+### Git Local User 추가  
+```
+git config -local user.name "깃이름"
+git config -local user.email "깃이메일"
+```  
