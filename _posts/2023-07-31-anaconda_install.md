@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Mac os M1 Anaconda Install 맥 아나콘다 설치"
-categories: tensorflow
+categories: anaconda
 tag: anaconda
 toc: true
 author_profile: false
