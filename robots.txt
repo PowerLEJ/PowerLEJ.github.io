@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://powerlej.github.io/
+Sitemap: https://powerlej.github.io/sitemap.xml
