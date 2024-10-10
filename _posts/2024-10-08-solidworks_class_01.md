@@ -27,6 +27,8 @@ search: true
   
 ![solidworks_class_20241008_007](/images/2024-10-08-Solidworks_class/solidworks_class_20241008_007.PNG){: width="70%" height="70%"}{: .center}  
   
+![solidworks_class_20241008_008](/images/2024-10-08-Solidworks_class/solidworks_class_20241008_008.PNG){: width="70%" height="70%"}{: .center}    
+  
 
 ## 그 외  
 보기 > 조명과 카메라(L) > 속성 > 간접조명  
