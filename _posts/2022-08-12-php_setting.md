@@ -1,8 +1,8 @@
 ---
 layout: single
-title:  "PHP 단축키 설정"
-categories: php
-tag: php
+title:  "Visual Studio Code Snippets 설정 방법"
+categories: vscode
+tag: vscode
 toc: true
 author_profile: false
 sidebar:
@@ -13,8 +13,7 @@ search: true
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}&count_bg=%23FFCF00&title_bg=%230045FF&icon=macys.svg&icon_color=%23FAFF00&title=hits&edge_flat=false)
 
 ## PHP 단축키 설정  
-<br />
-
+  
 파일 > 기본설정 > 사용자 코드 조각 > 새 코드 조각 > html.json.code-snippets 입력  
 ```
 {
@@ -45,4 +44,28 @@ search: true
 	}
 }
 ```  
-<br />
+  
+## C언어 단축키 설정  
+  
+파일 > 기본설정 > 코드 조각 구성 > c.json 에 아래와 같이 작성  
+  
+```
+"Main Function": {
+	"prefix": "!main",
+	"body": [
+		"#include <stdio.h>\n",
+		"int main(void)",
+		"{\n\t\n",
+		"\treturn 0;",
+		"}",
+	],
+	"description": "Snippets About stdio.h main"
+},
+"Printf Function": {
+	"prefix": "pf",
+	"body": [
+		"printf(\"\");",
+	],
+	"description": "Snippets About printf();"
+}
+```  
