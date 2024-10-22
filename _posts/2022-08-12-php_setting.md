@@ -69,3 +69,34 @@ search: true
 	"description": "Snippets About printf();"
 }
 ```  
+
+## C++ 단축키 설정  
+```
+"Main Function": {
+		"prefix": "!main",
+		"body": [
+			"#include <iostream>",
+			"#include <string>",
+			"using namespace std;\n",
+			"int main(void)",
+			"{\n\t\n",
+			"\treturn 0;",
+			"}",
+		],
+		"description": "Snippets About main"
+	},
+	"cout Function": {
+		"prefix": "co",
+		"body": [
+			"cout << \"\";",
+		],
+		"description": "Snippets About cout << ;"
+	},
+	"cin Function": {
+		"prefix": "ci",
+		"body": [
+			"cin >> ;",
+		],
+		"description": "Snippets About cin >> ;"
+	}
+```  
