@@ -1,0 +1,48 @@
+---
+layout: single
+title:  "Mam M1 brew & httpd"
+categories: mac
+tag: mac
+toc: true
+author_profile: false
+sidebar:
+    nav: "docs"
+search: true
+---
+
+![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}&count_bg=%23FFCF00&title_bg=%230045FF&icon=macys.svg&icon_color=%23FAFF00&title=hits&edge_flat=false)
+
+## brew  
+brew list 하면 내가 brew로 설치한 리스트 볼 수 있음  
+
+## brew에서 특정 동작 시작 방법  
+```
+brew services restart httpd
+brew services restart mariadb
+```  
+
+## httpd  
+```
+vim /opt/homebrew/etc/httpd/httpd.conf
+```  
+
+### 아래 8080을 80으로 바꿈  
+```
+#Listen 12.34.56.78:80
+Listen 80
+```  
+
+### 이 부분을 내가 작업할 폴더명으로 바꾼다  
+```
+DocumentRoot "/opt/homebrew/var/www"
+<Directory "/opt/homebrew/var/www">
+```  
+
+### 아래의 None을 All로 바꾼다  
+```
+# AllowOverride controls what directives may be placed in .htaccess files.
+# It can be "All", "None", or any combination of the keywords:
+#   AllowOverride FileInfo AuthConfig Limit
+#
+AllowOverride All
+```  
