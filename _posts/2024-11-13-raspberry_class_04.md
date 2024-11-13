@@ -55,19 +55,21 @@ KEY_C4 : 28(phys)
 
 ## 스위치  
 ![02_sw_draw](/images/2024-11-13-Raspberry_class/02_sw_draw.jpg){: width="100%" height="100%"}{: .center}  
+  
 ![02_sw](/images/2024-11-13-Raspberry_class/02_sw.jpg){: width="100%" height="100%"}{: .center}  
 
 ## FND  
 부품명 : 5611AH 공통캐소드
 부품명 : 5161AS 공통캐소드
 ![09_fnd](/images/2024-11-13-Raspberry_class/09_fnd.jpg){: width="100%" height="100%"}{: .center}  
-
+  
 ![0910_fnd](/images/2024-11-13-Raspberry_class/0910_fnd.jpg){: width="100%" height="100%"}{: .center}  
 
 ## FND  
 부품명 : 3461AS-1 공통캐소드
 ![10_fnd](/images/2024-11-13-Raspberry_class/10_fnd.jpg){: width="100%" height="100%"}{: .center}  
-![10_fnd_2](/images/2024-11-13-Raspberry_class/10_fnd_2.jpg){: width="100%" height="100%"}{: .center}  
 
 ## KeyPad  
+![10_fnd_2](/images/2024-11-13-Raspberry_class/10_fnd_2.jpg){: width="100%" height="100%"}{: .center}  
+  
 ![12_keypad](/images/2024-11-13-Raspberry_class/12_keypad.jpg){: width="100%" height="100%"}{: .center}  
