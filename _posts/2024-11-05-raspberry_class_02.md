@@ -34,5 +34,3 @@ gpio readall
 ![gpio_readall](/images/2024-11-05-Raspberry_class/gpio_readall.png){: width="50%" height="100%"}{: .center}  
   
 ![raspberry_pin](/images/2024-11-05-Raspberry_class/raspberry_pin.png){: width="100%" height="100%"}{: .center}  
-  
-![led_sw_num](/images/2024-11-05-Raspberry_class/led_sw_num.png){: width="50%" height="100%"}{: .center}  
