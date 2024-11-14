@@ -21,3 +21,7 @@ search: true
 ## 디지털 정보의 전압레벨  
 
 ![20241108_03](/images/2024-11-08-Raspberry_class/20241108_03.jpg){: width="50%" height="100%"}{: .center}  
+
+## 전압  
+
+![20241114_04](/images/2024-11-08-Raspberry_class/20241114_04.jpg){: width="50%" height="100%"}{: .center}  

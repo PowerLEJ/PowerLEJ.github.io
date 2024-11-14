@@ -41,14 +41,14 @@ FND_D2 : 21(phys)
 FND_D3 : 23(phys)
 FND_D4 : 27(phys)
 
-KEY_R1 : 12(phys)
-KEY_R2 : 13(phys)
-KEY_R3 : 16(phys)
-KEY_R4 : 18(phys)
-KEY_C1 : 22(phys)
-KEY_C2 : 24(phys)
-KEY_C3 : 26(phys)
-KEY_C4 : 28(phys)
+KEYPAD_R1 : 12(phys)
+KEYPAD_R2 : 13(phys)
+KEYPAD_R3 : 16(phys)
+KEYPAD_R4 : 18(phys)
+KEYPAD_C1 : 22(phys)
+KEYPAD_C2 : 24(phys)
+KEYPAD_C3 : 26(phys)
+KEYPAD_C4 : 28(phys)
 ```  
 
 ![raspberry_pin](/images/2024-11-05-Raspberry_class/raspberry_pin.png){: width="100%" height="100%"}{: .center}  
@@ -59,14 +59,14 @@ KEY_C4 : 28(phys)
 ![02_sw](/images/2024-11-13-Raspberry_class/02_sw.jpg){: width="100%" height="100%"}{: .center}  
 
 ## FND  
-부품명 : 5611AH 공통캐소드
-부품명 : 5161AS 공통캐소드
+부품명 : 5611AH (공통캐소드)  
+부품명 : 5161AS (공통캐소드)
 ![09_fnd](/images/2024-11-13-Raspberry_class/09_fnd.jpg){: width="100%" height="100%"}{: .center}  
   
 ![0910_fnd](/images/2024-11-13-Raspberry_class/0910_fnd.jpg){: width="100%" height="100%"}{: .center}  
 
 ## FND  
-부품명 : 3461AS-1 공통캐소드
+부품명 : 3461AS-1 (공통캐소드)
 ![10_fnd](/images/2024-11-13-Raspberry_class/10_fnd.jpg){: width="100%" height="100%"}{: .center}  
 
 ## KeyPad  

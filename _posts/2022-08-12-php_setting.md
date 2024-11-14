@@ -55,7 +55,7 @@ search: true
 	"body": [
 		"#include <stdio.h>\n",
 		"int main(void)",
-		"{\n\t\n",
+		"{\n\t$1\n",
 		"\treturn 0;",
 		"}",
 	],
@@ -64,7 +64,7 @@ search: true
 "Printf Function": {
 	"prefix": "pf",
 	"body": [
-		"printf(\"\");",
+		"printf(\"$1\");",
 	],
 	"description": "Snippets About printf();"
 }
@@ -79,7 +79,7 @@ search: true
 			"#include <string>",
 			"using namespace std;\n",
 			"int main(void)",
-			"{\n\t\n",
+			"{\n\t$1\n",
 			"\treturn 0;",
 			"}",
 		],
@@ -88,14 +88,14 @@ search: true
 	"cout Function": {
 		"prefix": "co",
 		"body": [
-			"cout << \"\";",
+			"cout << \"$1\" << endl;",
 		],
 		"description": "Snippets About cout << ;"
 	},
 	"cin Function": {
 		"prefix": "ci",
 		"body": [
-			"cin >> ;",
+			"cin >> $1;",
 		],
 		"description": "Snippets About cin >> ;"
 	}
