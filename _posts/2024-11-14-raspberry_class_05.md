@@ -13,12 +13,15 @@ search: true
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}&count_bg=%23FFCF00&title_bg=%230045FF&icon=macys.svg&icon_color=%23FAFF00&title=hits&edge_flat=false)
 
 ## Piezo  
-Physical pin 기준으로 18번을 피에조 -를, 2번 5V에 +를 연결  
+Physical pin 기준으로 18번을 피에조의 -를, 2번 5V에 피에조의 +를 연결  
 
 ![01_piezo](/images/2024-11-14-Raspberry_class/01_piezo.jpg){: width="100%" height="100%"}{: .center}  
 
 ## Servo  
-Physical pin 기준으로 18번을 Servo의 주황색에, 2번 5V를 Servo의 빨간색에 39번 Ground를 Servo의 갈색선에 연결함    
+Physical pin 기준으로 
+18번을 Servo의 주황색 선에,  
+2번 5V를 Servo의 빨간색 선에,  
+39번 Ground를 Servo의 갈색선에 연결함  
 ![02_servo](/images/2024-11-14-Raspberry_class/02_servo.jpg){: width="100%" height="100%"}{: .center}  
 
 ## PWM (Pulse Width Modulation)  
