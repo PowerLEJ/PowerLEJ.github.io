@@ -1,8 +1,8 @@
 ---
 layout: single
 title:  "Raspberry Ramdisk 라즈베리파이 램디스크 만들기"
-categories: raspberry
-tag: raspberry
+categories: Raspberry
+tag: Raspberry
 toc: true
 author_profile: false
 sidebar:

@@ -41,3 +41,17 @@ PWM을 사용하면 아날로그 출력 느낌을 할 수 있다.
 SMPS(Switching Mode Power Supply) : 스위칭 동작에 의한 전원을 공급해주는 장치  
 
 ![02_pwm_02](/images/2024-11-14-Raspberry_class/02_pwm_02.jpg){: width="100%" height="100%"}{: .center}  
+
+## Ultrasonic Sensor 초음파 센서  
+
+부품명 : HC-SR04  
+  
+- VCC // 5V // (Physical 기준 : 2)  
+- Trig // OUTPUT 출력 // 발신 // (Physical 기준 : 16)  
+- Echo // INPUT 입력 // 수신 // (Physical 기준 : 18)  
+- GND // GND // (Physical 기준 : 39)  
+  
+마이크로초(microsecond, μs) or 마이크로세컨드 : 백만 분의 1초  
+공식: uS / 58 = centimeters  
+
+![20241115_ultrasonic](/images/2024-11-15-Raspberry_class/20241115_ultrasonic.jpg){: width="100%" height="100%"}{: .center}  

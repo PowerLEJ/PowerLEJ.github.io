@@ -21,6 +21,8 @@ ex. 친구를 집에 초대했는데 초인종도 없고 핸드폰도 없어서
 새치기, 중단  
 CPU가 프로그램을 실행하고 있을때, 입출력 어떠한 주변장치들의 입출력이나 하드웨어 문제가 발생하여 처리가 필요한 경우,  
 프로그램에서 예외 등이 발생했을때 CPU에게 이를 알려주는 방식  
+  
+![raspberry_pin](/images/2024-11-05-Raspberry_class/raspberry_pin.png){: width="100%" height="100%"}{: .center}  
 
 ```
 LED 0 : 16 (wPi)	10(phys)     A:07(FND)
@@ -50,9 +52,7 @@ KEYPAD_C2 : 24(phys)
 KEYPAD_C3 : 26(phys)
 KEYPAD_C4 : 28(phys)
 ```  
-
-![raspberry_pin](/images/2024-11-05-Raspberry_class/raspberry_pin.png){: width="100%" height="100%"}{: .center}  
-
+  
 ## 스위치  
 ![02_sw_draw](/images/2024-11-13-Raspberry_class/02_sw_draw.jpg){: width="100%" height="100%"}{: .center}  
   
