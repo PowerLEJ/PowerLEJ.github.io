@@ -99,5 +99,22 @@ sudo raspi-config
 Raspberry Pi Configuration > Interfaces >  
 SPI: ON, I2C : ON, Serial Port : ON, Serial Console : OFF  
 
+## Putty로 Serial 연결하기  
 
+라즈베리파이 VNC 터미널에서  
+```
+sudo apt install putty
+```  
+라즈베리파이 VNC 터미널에서  
+```
+putty
+```  
 
+Connect type : Serial 선택하고 Open 한다.  
+
+Font > Font used for ordinary text 에 server.fixed가 되어 있어서 문제가 된다.  
+대충 다른 폰트로 선택하고,  
+  
+![putty_font](/images/2024-11-18-Raspberry_class/putty_font.PNG){: width="100%" height="100%"}{: .center}  
+  
+defaul setting > Save  

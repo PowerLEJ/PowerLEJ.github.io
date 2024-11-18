@@ -51,6 +51,16 @@ KEYPAD_C1 : 22(phys)
 KEYPAD_C2 : 24(phys)
 KEYPAD_C3 : 26(phys)
 KEYPAD_C4 : 28(phys)
+
+// Character LCD
+LCD_D4 :  22(phys)      (LCD - 11)
+LCD_D5 :  24(phys)      (LCD - 12)
+LCD_D6 :  26(phys)      (LCD - 13)
+LCD_D7 :  28(phys)      (LCD - 14)
+LCD_RS :  11(phys)      (LCD - 4)
+LCD_RW :  13(phys)      (LCD - 5)
+LCD_E  :  15(phys)      (LCD - 6)
+
 ```  
   
 ## 스위치  
