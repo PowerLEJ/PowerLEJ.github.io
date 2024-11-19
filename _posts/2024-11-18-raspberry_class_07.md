@@ -22,6 +22,14 @@ search: true
 ![Character_LCD_02](/images/2024-11-18-Raspberry_class/Character_LCD_02.PNG){: width="100%" height="100%"}{: .center}  
   
 ![Character_LCD_03](/images/2024-11-18-Raspberry_class/Character_LCD_03.PNG){: width="100%" height="100%"}{: .center}  
+  
+![20241119_01](/images/2024-11-18-Raspberry_class/20241119_01.PNG){: width="100%" height="100%"}{: .center}  
+  
+![20241119_02](/images/2024-11-18-Raspberry_class/20241119_02.PNG){: width="100%" height="100%"}{: .center}  
+  
+![20241119_03](/images/2024-11-18-Raspberry_class/20241119_03.PNG){: width="100%" height="100%"}{: .center}  
+  
+![20241119_04](/images/2024-11-18-Raspberry_class/20241119_04.jpg){: width="100%" height="100%"}{: .center}  
 
 ## 라즈베리파이 이미지 백업하기  
 Win32 Disk Imager  
