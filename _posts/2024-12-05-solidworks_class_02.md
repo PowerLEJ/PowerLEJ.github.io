@@ -13,6 +13,8 @@ search: true
 ![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://{{ site.url | remove_first: 'https://' | remove_first: 'http://' }}{{ page.url }}&count_bg=%23FFCF00&title_bg=%230045FF&icon=macys.svg&icon_color=%23FAFF00&title=hits&edge_flat=false)
 
 ## 솔리드웍스 A3 도면 양식 기본 설정  
+![20241205_22](/images/2024-12-05-Solidworks_class/20241205_22.jpg){: width="70%" height="70%"}{: .center}  
+  
 ![20241205_00_01](/images/2024-12-05-Solidworks_class/20241205_00_01.PNG){: width="70%" height="70%"}{: .center}  
   
 ![20241205_00_02](/images/2024-12-05-Solidworks_class/20241205_00_02.PNG){: width="70%" height="70%"}{: .center}  
