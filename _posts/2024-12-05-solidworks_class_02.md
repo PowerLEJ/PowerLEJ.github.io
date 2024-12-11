@@ -15,11 +15,15 @@ search: true
 ## 솔리드웍스 A3 도면 양식 기본 설정  
 ![20241205_22](/images/2024-12-05-Solidworks_class/20241205_22.jpg){: width="70%" height="70%"}{: .center}  
   
+![20241211_01](/images/2024-12-05-Solidworks_class/20241211_01.PNG){: width="70%" height="70%"}{: .center}  
+  
 ![20241205_00_01](/images/2024-12-05-Solidworks_class/20241205_00_01.PNG){: width="70%" height="70%"}{: .center}  
   
 ![20241205_00_02](/images/2024-12-05-Solidworks_class/20241205_00_02.PNG){: width="70%" height="70%"}{: .center}  
   
 ![20241205_01](/images/2024-12-05-Solidworks_class/20241205_01.PNG){: width="70%" height="70%"}{: .center}  
+
+시트1 우측클릭 > 속성 > 확인 해야 함  
   
 ![20241205_02](/images/2024-12-05-Solidworks_class/20241205_02.PNG){: width="70%" height="70%"}{: .center}  
   
@@ -37,11 +41,15 @@ search: true
   
 ![20241205_08](/images/2024-12-05-Solidworks_class/20241205_08.PNG){: width="70%" height="70%"}{: .center}  
   
+![20241211_02](/images/2024-12-05-Solidworks_class/20241211_02.PNG){: width="70%" height="70%"}{: .center}  
+  
+![20241211_03](/images/2024-12-05-Solidworks_class/20241211_03.PNG){: width="70%" height="70%"}{: .center}  
+  
 ![20241205_09](/images/2024-12-05-Solidworks_class/20241205_09.PNG){: width="70%" height="70%"}{: .center}  
   
-![20241205_10](/images/2024-12-05-Solidworks_class/20241205_10.PNG){: width="70%" height="70%"}{: .center}  
+![20241211_04](/images/2024-12-05-Solidworks_class/20241211_04.PNG){: width="70%" height="70%"}{: .center}  
   
-![20241205_11](/images/2024-12-05-Solidworks_class/20241205_11.PNG){: width="70%" height="70%"}{: .center}  
+![20241211_05](/images/2024-12-05-Solidworks_class/20241211_05.PNG){: width="70%" height="70%"}{: .center}  
   
 ![20241205_12](/images/2024-12-05-Solidworks_class/20241205_12.PNG){: width="70%" height="70%"}{: .center}  
   
@@ -57,6 +65,9 @@ search: true
 시트1 > 오른쪽마우스 시트형식 편집  
 
 ![20241205_17](/images/2024-12-05-Solidworks_class/20241205_17.PNG){: width="70%" height="70%"}{: .center}  
+
+### 글자 중간으로 옮기는 방법  
+글자 우측 클릭 > 사각형 중심으로 스냅 > Ctrl 로 4개 선으로 사각형 모양으로 클릭  
   
 ![20241205_18](/images/2024-12-05-Solidworks_class/20241205_18.PNG){: width="70%" height="70%"}{: .center}  
 
