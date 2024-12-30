@@ -106,3 +106,8 @@ id
 uid=1000(lej) gid=1000(lej) groups=1000(lej),4(adm),20(dialout),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),133(lxd),134(sambashare)
 */
 ```  
+
+## Arduino Uno Board 숫자  
+0 에서 A5 까지 : digitalRead(), digitalWrite()  
+A0 에서 A5 까지 : analogRead()  
+숫자 앞에 ~ 있는 것 (~3, ~5, ~6, ~9, ~10, ~11) : analogWrite()  
