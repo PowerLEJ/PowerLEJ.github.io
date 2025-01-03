@@ -83,6 +83,23 @@ rviz2
 
 ![20250103_02](/images/2025-01-03-DepthCamera_study/20250103_02.png){: width="70%" height="70%"}{: .center}  
 
+## Opencv with Python 
+
+```
+sudo apt install python3-pip
+``` 
+
+```
+pip install opencv-python
+``` 
+
+```
+pip install pyrealsense2
+``` 
+
+```
+pip install numpy
+``` 
 
 ## python으로 RealSense 연결  
 
